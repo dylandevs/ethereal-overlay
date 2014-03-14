@@ -24,6 +24,7 @@ public:
 	void removeListener(ListenerClass * listener, ListenerMethod method){
 		ofRemoveListener(triggerEvent,listener,method);
 	}
+	void setFillColor(int r, int g, int b);
 
 private:
 	ofEvent<void> triggerEvent;

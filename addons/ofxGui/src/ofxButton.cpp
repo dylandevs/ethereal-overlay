@@ -12,7 +12,6 @@ ofxButton* ofxButton::setup(string toggleName, float width, float height){
 	b.height = height;
 	bGuiActive = false;
 	value = false;
-	checkboxRect.set(1, 1, b.height - 2, b.height - 2);
 
 	ofRegisterMouseEvents(this,OF_EVENT_ORDER_BEFORE_APP);
 
@@ -47,4 +46,12 @@ void ofxButton::valueChanged(bool & v){
 	if(!v){
 		ofNotifyEvent(triggerEvent);
 	}
+}
+
+void ofxButton::setFillColor(int r, int g, int b){
+	ofColor thing;
+	thing.r = r;
+	thing.g = g;
+	thing.b = b;
+	thisBackgroundColor = thing;
 }
